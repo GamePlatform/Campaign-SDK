@@ -28,7 +28,8 @@ class HttpRequestAgent {
         for (i in 0..images.length() - 1) {
           val id = i                                // TODO get ID from response
           val url = (images[i] as JSONObject).getString("url")
-          val ci = CampaignInfo(id.toString(), url) // TODO get ID from response
+          val template = (images[i] as JSONObject).getInt("template")
+          val ci = CampaignInfo(id.toString(), url, template) // TODO get ID from response
           Log.v("cl/HttpRequestAgent", "reqParser/loadUrls Campaign: " + ci)
           campaigns.add(ci)
           Log.d("cl/HttpRequestAgent", "reqParser/loadURLs Complete")
@@ -46,8 +47,8 @@ class HttpRequestAgent {
     // get Campaign List fail
     // TODO #43
     if (campaigns.size <= 0) {
-      val ci1 = CampaignInfo("1", "https://cdn.pixabay.com/photo/2016/04/13/21/32/lamb-1327753_960_720.jpg")
-      val ci2 = CampaignInfo("2", "http://livedoor.blogimg.jp/daynew/imgs/1/4/14ed705b.jpg")
+      val ci1 = CampaignInfo("1", "https://cdn.pixabay.com/photo/2016/04/13/21/32/lamb-1327753_960_720.jpg",1)
+      val ci2 = CampaignInfo("2", "http://livedoor.blogimg.jp/daynew/imgs/1/4/14ed705b.jpg",1)
       campaigns.add(ci1)
       campaigns.add(ci2)
       Log.d("cl/HttpRequestAgent", "reqParser/loadURLs loadFail")

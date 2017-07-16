@@ -27,14 +27,14 @@ class CampaignDialogFragment : DialogFragment(), CampaignDialogContract.View {
     val url: String = presenter!!.getCampaignImageURL() //TODO PRIMARY
     Log.d("cl/DialogFragment", "imageURL: $url")
 
-    val temp_num: Int = presenter!!.getTemplateNum()
+    val template: Int = presenter!!.getTemplateNum()
 
     val jsInterface = CustomJavascriptInterface()
     jsInterface.setOnCustomJavascriptListener(presenter!!.getCustomJavascriptListener())
 
     var view = activity.layoutInflater.inflate(R.layout.dialog_complete, null)
 
-    when(temp_num) {
+    when(template) {
       1->{view = activity.layoutInflater.inflate(R.layout.dialog_complete, null)}
       2->{view = activity.layoutInflater.inflate(R.layout.dialog_onlyclose, null)}
       3->{view = activity.layoutInflater.inflate(R.layout.dialog_bottom, null)}
