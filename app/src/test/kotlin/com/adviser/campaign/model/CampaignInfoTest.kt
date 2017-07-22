@@ -4,7 +4,7 @@ import org.junit.Assert
 import org.junit.Test
 
 /**
- * Created by vaio on 2017-07-10.
+ * Created by youmin-Kim on 2017-07-10.
  */
 class CampaignInfoTest {
     @Test

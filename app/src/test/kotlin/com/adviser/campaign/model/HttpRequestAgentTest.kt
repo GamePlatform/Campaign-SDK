@@ -4,7 +4,7 @@ import org.junit.Assert
 import org.junit.Test
 
 /**
- * Created by vaio on 2017-07-15.
+ * Created by youmin-Kim on 2017-07-15.
  */
 class HttpRequestAgentTest {
     @Test
