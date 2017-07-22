@@ -30,9 +30,9 @@ class HttpRequestAgent {
           val order = (images[i] as JSONObject).getInt("order")
           val title = (images[i] as JSONObject).getString("title")
           val url = (images[i] as JSONObject).getString("url")
+          val template = (images[i] as JSONObject).getInt("template")
           val adExpireDay = (images[i] as JSONObject).getInt("ad_expire_day")
-          val templateNum = (images[i] as JSONObject).getInt("template_num")
-          val ci = CampaignInfo(id, order, title, url, adExpireDay, templateNum) // TODO get ID from response
+          val ci = CampaignInfo(id, order, title, url, adExpireDay, template) // TODO get ID from response
           Log.v("cl/HttpRequestAgent", "reqParser/loadUrls Campaign: " + ci)
           campaigns.add(ci)
           Log.d("cl/HttpRequestAgent", "reqParser/loadURLs Complete")

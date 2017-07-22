@@ -11,7 +11,6 @@ import org.testng.annotations.Test
 class ExampleUnitTestKotlin {
   private val ALLOWED_DELTA = 0.01f
 
-
   @Test
   fun exampleTest() {
     fun firstTest() {

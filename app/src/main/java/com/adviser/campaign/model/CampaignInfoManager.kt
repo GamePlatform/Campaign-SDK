@@ -8,10 +8,11 @@ import android.util.Log
 //데이터 계산 및 처리
 class CampaignInfoManager {
 
-  private var agent = HttpRequestAgent()
-  private var locationId: String = ""
-  private var list = arrayListOf<CampaignInfo>()
-  private var cur: Int = 0
+  //UnitTest를 위해 변수들 private 속성 지움
+  var agent = HttpRequestAgent()
+  var locationId: String = ""
+  var list = arrayListOf<CampaignInfo>()
+  var cur: Int = 0
 
   fun loadCampaign(locationId: String) {
     Log.d("cl/CampaignInfoManager", "loadCampaign/Start")
