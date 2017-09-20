@@ -33,7 +33,8 @@ android {
 // test setting
 afterEvaluate {
     android.sourceSets.all { sourceSet ->
-        if (!sourceSet.name.startsWith("test")) {
+        if (!sourceSet.name.startsWith("test"))
+        {
             sourceSet.kotlin.setSrcDirs([])
         }
     }
